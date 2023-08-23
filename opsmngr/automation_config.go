@@ -332,6 +332,7 @@ type AuditLog struct {
 
 // LogRotate part of the internal Process struct.
 type LogRotate struct {
+	MaxUncompressed    *int     `json:"maxUncompressed,omitempty"`
 	NumTotal           *int     `json:"numTotal,omitempty"`
 	NumUncompressed    *int     `json:"numUncompressed,omitempty"`
 	PercentOfDiskspace *float64 `json:"percentOfDiskspace,omitempty"`
