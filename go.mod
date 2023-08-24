@@ -1,4 +1,4 @@
-module github.com/ruhickey/go-client-mongodb-ops-manager
+module go.mongodb.org/ops-manager
 
 go 1.18
 
