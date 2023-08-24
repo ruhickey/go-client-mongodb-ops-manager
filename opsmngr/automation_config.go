@@ -83,7 +83,6 @@ type AutomationConfig struct {
 	IndexConfigs              []*IndexConfig            `json:"indexConfigs"`
 	Kerberos                  *map[string]interface{}   `json:"kerberos,omitempty"`
 	LDAP                      *map[string]interface{}   `json:"ldap,omitempty"`
-	MaintainedEnvoys          *map[string]interface{}   `json:"maintainedEnvoys,omitempty"`
 	MongoDBToolsVersion       *map[string]interface{}   `json:"mongoDbToolsVersion,omitempty"`
 	MongoDBVersions           []*map[string]interface{} `json:"mongoDbVersions,omitempty"`
 	MongoSQLDs                []*map[string]interface{} `json:"mongosqlds"` //nolint:tagliatelle // correct from API
