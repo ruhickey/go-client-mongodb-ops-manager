@@ -66,36 +66,40 @@ func (s *AutomationServiceOp) UpdateConfig(ctx context.Context, groupID string, 
 //
 // See more: https://docs.opsmanager.mongodb.com/current/reference/api/automation-config/automation-config-parameters/
 type AutomationConfig struct {
-	AgentVersion              *map[string]interface{}   `json:"agentVersion,omitempty"`
-	AtlasProxies              *[]interface{}            `json:"atlasProxies,omitempty"`
-	AtlasUISes                []*map[string]interface{} `json:"atlasUISes,omitempty"` //nolint:tagliatelle // correct from API
-	Filebeat                  *map[string]interface{}   `json:"filebeat,omitempty"`
-	Auth                      Auth                      `json:"auth"`
-	BackupVersions            []*ConfigVersion          `json:"backupVersions"`
-	Balancer                  *map[string]interface{}   `json:"balancer"`
-	ClusterWideConfigurations *map[string]interface{}   `json:"clusterWideConfigurations,omitempty"`
-	CPSModules                []*map[string]interface{} `json:"cpsModules"`
-	DBCheckModules            []*map[string]interface{} `json:"dbCheckModules,omitempty"`
-	IndexConfigs              []*IndexConfig            `json:"indexConfigs"`
-	Kerberos                  *map[string]interface{}   `json:"kerberos,omitempty"`
-	LDAP                      *map[string]interface{}   `json:"ldap,omitempty"`
-	MaintainedEnvoys          []*map[string]interface{} `json:"maintainedEnvoys,omitempty"`
-	MongoDBToolsVersion       *map[string]interface{}   `json:"mongoDbToolsVersion,omitempty"`
-	MongoDBVersions           []*map[string]interface{} `json:"mongoDbVersions,omitempty"`
-	MongoSQLDs                []*map[string]interface{} `json:"mongosqlds"` //nolint:tagliatelle // correct from API
-	MonitoringVersions        []*ConfigVersion          `json:"monitoringVersions,omitempty"`
-	OnlineArchiveModules      []*map[string]interface{} `json:"onlineArchiveModules"`
-	Mongots                   []*map[string]interface{} `json:"mongots"`
-	Options                   *map[string]interface{}   `json:"options"`
-	Processes                 []*Process                `json:"processes"`
-	Prometheus                *Prometheus               `json:"prometheus,omitempty"`
-	ReplicaSets               []*ReplicaSet             `json:"replicaSets"`
-	Roles                     []*map[string]interface{} `json:"roles"`
-	Sharding                  []*ShardingConfig         `json:"sharding"`
-	SSL                       *SSL                      `json:"ssl,omitempty"` // Deprecated: prefer TLS
-	TLS                       *SSL                      `json:"tls,omitempty"`
-	UIBaseURL                 *string                   `json:"uiBaseUrl,omitempty"`
-	Version                   int                       `json:"version,omitempty"`
+	AgentVersion                    *map[string]interface{}   `json:"agentVersion,omitempty"`
+	AtlasProxies                    *[]interface{}            `json:"atlasProxies,omitempty"`
+	AtlasUISes                      []*map[string]interface{} `json:"atlasUISes,omitempty"` //nolint:tagliatelle // correct from API
+	Filebeat                        *map[string]interface{}   `json:"filebeat,omitempty"`
+	Auth                            Auth                      `json:"auth"`
+	BackupVersions                  []*ConfigVersion          `json:"backupVersions"`
+	Balancer                        *map[string]interface{}   `json:"balancer"`
+	ClusterWideConfigurations       *map[string]interface{}   `json:"clusterWideConfigurations,omitempty"`
+	CPSModules                      []*map[string]interface{} `json:"cpsModules"`
+	DBCheckModules                  []*map[string]interface{} `json:"dbCheckModules,omitempty"`
+	IndexConfigs                    []*IndexConfig            `json:"indexConfigs"`
+	Kerberos                        *map[string]interface{}   `json:"kerberos,omitempty"`
+	LDAP                            *map[string]interface{}   `json:"ldap,omitempty"`
+	MaintainedEnvoys                []*map[string]interface{} `json:"maintainedEnvoys,omitempty"`
+	MaintainedMongotunes            []*map[string]interface{} `json:"maintainedMongotunes,omitempty"`
+	MaintainedRamis                 []*map[string]interface{} `json:"maintainedRamis,omitempty"`
+	MongoDBToolsVersion             *map[string]interface{}   `json:"mongoDbToolsVersion,omitempty"`
+	MongoDBVersions                 []*map[string]interface{} `json:"mongoDbVersions,omitempty"`
+	MongoSQLDs                      []*map[string]interface{} `json:"mongosqlds"` //nolint:tagliatelle // correct from API
+	MonitoringVersions              []*ConfigVersion          `json:"monitoringVersions,omitempty"`
+	OnlineArchiveModules            []*map[string]interface{} `json:"onlineArchiveModules"`
+	Mongots                         []*map[string]interface{} `json:"mongots"`
+	OidcProviderConfigs             []*map[string]interface{} `json:"oidcProviderConfigs,omitempty"`
+	Options                         *map[string]interface{}   `json:"options"`
+	Processes                       []*Process                `json:"processes"`
+	Prometheus                      *Prometheus               `json:"prometheus,omitempty"`
+	ReplicaSets                     []*ReplicaSet             `json:"replicaSets"`
+	Roles                           []*map[string]interface{} `json:"roles"`
+	ServerlessStateCacheMaintainers []*map[string]interface{} `json:"serverlessStateCacheMaintainers,omitempty"`
+	Sharding                        []*ShardingConfig         `json:"sharding"`
+	SSL                             *SSL                      `json:"ssl,omitempty"` // Deprecated: prefer TLS
+	TLS                             *SSL                      `json:"tls,omitempty"`
+	UIBaseURL                       *string                   `json:"uiBaseUrl,omitempty"`
+	Version                         int                       `json:"version,omitempty"`
 }
 
 type ConfigVersion struct {
