@@ -81,6 +81,7 @@ type AutomationConfig struct {
 	LDAP                            *map[string]interface{}   `json:"ldap,omitempty"`
 	MaintainedEnvoys                []*map[string]interface{} `json:"maintainedEnvoys,omitempty"`
 	MaintainedMongotunes            []*map[string]interface{} `json:"maintainedMongotunes,omitempty"`
+	MaintainedOplogInjectors        []*map[string]interface{} `json:"maintainedOplogInjectors,omitempty"`
 	MaintainedRamis                 []*map[string]interface{} `json:"maintainedRamis,omitempty"`
 	MongoDBToolsVersion             *map[string]interface{}   `json:"mongoDbToolsVersion,omitempty"`
 	MongoDBVersions                 []*map[string]interface{} `json:"mongoDbVersions,omitempty"`
